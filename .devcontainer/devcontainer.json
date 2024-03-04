@@ -1,0 +1,30 @@
+{
+    "name": "Mapbox Tilesets & Geospatial Data Analysis",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "3.9-bullseye",
+            "INSTALL_NODE": "true",
+            "NODE_VERSION": "lts/*"
+        }
+    },
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "python.analysis.indexing": true,
+        "python.analysis.typeCheckingMode": "basic"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "github.codespaces",
+        "esbenp.prettier-vscode"
+    ],
+    "forwardPorts": [],
+    "postCreateCommand": "pip install jupyter numpy pandas geopandas folium matplotlib scikit-learn mapbox-tilesets",
+    "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        }
+    }
+}
