@@ -1,13 +1,5 @@
 {
     "name": "Mapbox Tilesets & Geospatial Data Analysis",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "args": {
-            "VARIANT": "3.9-bullseye",
-            "INSTALL_NODE": "true",
-            "NODE_VERSION": "lts/*"
-        }
-    },
     "customizations": {
         "vscode": {
             "settings": {
@@ -19,12 +11,19 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "github.codespaces",
-                "esbenp.prettier-vscode"
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
             ]
         }
     },
     "forwardPorts": [],
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libgdal-dev && pip install jupyter numpy pandas geopandas folium matplotlib mapbox scikit-learn mapbox-tilesets mapbox-tilesets[estimate-area] rasterio",
+    "postCreateCommand": [
+        "sudo apt-get update",
+        "sudo apt-get install -y libgdal-dev",
+        "pip install jupyter numpy pandas geopandas folium matplotlib mapbox scikit-learn rasterio",
+        "npm install -g @mapbox/tilesets-cli",
+        "npm install -g parcel-bundler"
+    ],
     "remoteUser": "vscode",
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
@@ -32,4 +31,3 @@
         }
     }
 }
-
