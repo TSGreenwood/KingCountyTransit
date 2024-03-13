@@ -11,18 +11,17 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "github.codespaces",
-                "esbenp.prettier-vscode",
-                "dbaeumer.vscode-eslint"
+                "esbenp.prettier-vscode"
             ]
         }
     },
     "forwardPorts": [],
     "postCreateCommand": [
         "sudo apt-get update",
-        "sudo apt-get install -y libgdal-dev",
+        "sudo apt-get install -y libgdal-dev gdal-bin",
         "pip install jupyter numpy pandas geopandas folium matplotlib mapbox scikit-learn rasterio",
-        "npm install -g @mapbox/tilesets-cli",
-        "npm install -g parcel-bundler"
+        "pip install mapbox-tilesets",
+        "pip install 'mapbox-tilesets[estimate-area]'"
     ],
     "remoteUser": "vscode",
     "features": {
