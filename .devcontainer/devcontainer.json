@@ -24,7 +24,7 @@
         }
     },
     "forwardPorts": [],
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libgdal-dev && pip install jupyter numpy pandas geopandas folium matplotlib scikit-learn mapbox-tilesets",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libgdal-dev && pip install jupyter numpy pandas geopandas folium matplotlib mapbox scikit-learn mapbox-tilesets mapbox-tilesets[estimate-area] rasterio",
     "remoteUser": "vscode",
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
