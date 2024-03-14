@@ -1,0 +1,10 @@
+{
+    "version": 1,
+    "layers": {
+      "King County Bus Stops": {
+        "source": "mapbox://tileset-source/bikebusroutescout/kingcounty_bus_routes",
+        "minzoom": 12,
+        "maxzoom": 15
+      }
+    }
+  }
